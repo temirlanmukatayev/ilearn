@@ -1,0 +1,40 @@
+{% extends '_base.html' %}
+
+{% block title %}My courses{% endblock title %}
+
+{% block content %}
+<div class="row mt-5">
+  <div class="col">
+    <h1>My Courses <a href="{% url 'course_create' %}" class="btn btn-sm btn-outline-primary">Create new course</a></h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for course in object_list %}
+        <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td>{{ course.title }}</td>
+          <td><a href="{% url 'course_edit' course.id %}" class="btn btn-primary">Edit</a></td>
+          <td><a href="{% url 'course_delete' course.id %}" class="btn btn-primary">Delete</a></td>
+        </tr>
+        {% empty %}
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock content %}
+  
+    
