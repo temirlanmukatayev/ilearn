@@ -1,5 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, \
     PermissionRequiredMixin
+from django.views.generic import TemplateView
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -27,6 +28,10 @@ class OwnerCourseMixin(OwnerMixin, LoginRequiredMixin, PermissionRequiredMixin):
 
 class OwnerCourseEditMixin(OwnerCourseMixin, OwnerEditMixin):
     template_name = 'courses/manage/course/form.html'
+
+
+class HomepageView(TemplateView):
+    template_name = 'home.html'
 
 
 class ManageCourseListView(OwnerCourseMixin, ListView):

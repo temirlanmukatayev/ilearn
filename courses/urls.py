@@ -4,10 +4,11 @@ from . import views
 
 
 urlpatterns = [
+    path('', views.HomepageView.as_view(), name='home'),
     path(
-        'mine/',
+        'courses/mine/',
         views.ManageCourseListView.as_view(),
-        name='manage_course_list'
+        name='course_list'
     ),
     path(
         'create/',
