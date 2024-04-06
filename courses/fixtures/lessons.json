@@ -1,0 +1,53 @@
+[
+{
+    "model": "courses.lesson",
+    "pk": 1,
+    "fields": {
+        "owner": 1,
+        "module": 1,
+        "title": "Pros and cons of Python",
+        "slug": "pros-and-cons-of-python",
+        "description": "All strengths and weaknesses of Python language are explained.",
+        "order": 1,
+        "content": "",
+        "image": "",
+        "file": "",
+        "video": "https://youtu.be/Ey4nRKGzcGo",
+        "created": "2024-04-06T16:25:18.073Z"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 2,
+    "fields": {
+        "owner": 1,
+        "module": 2,
+        "title": "List, Tuple, Dictionary",
+        "slug": "list-tuple-dictionary",
+        "description": "Detailed explanation of lists, tuples and dictionaries in Python.",
+        "order": 2,
+        "content": "",
+        "image": "",
+        "file": "",
+        "video": "https://youtu.be/Ey4nRKGzcGo",
+        "created": "2024-04-06T16:27:07.191Z"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 3,
+    "fields": {
+        "owner": 1,
+        "module": 3,
+        "title": "Inheritance in OOP",
+        "slug": "inheritance-in-oop",
+        "description": "How inheritance works in Python.",
+        "order": 3,
+        "content": "",
+        "image": "",
+        "file": "",
+        "video": "https://youtu.be/Ey4nRKGzcGo",
+        "created": "2024-04-06T16:27:45.264Z"
+    }
+}
+]

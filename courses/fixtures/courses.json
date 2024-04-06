@@ -1,0 +1,38 @@
+[
+{
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+        "owner": 1,
+        "subject": 1,
+        "title": "Object oriented programming with Python",
+        "slug": "object-oriented-programming-with-python",
+        "overview": "Complete Python course with focus on Object Oriented Programming.",
+        "created": "2024-04-06T16:21:25.168Z"
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+        "owner": 1,
+        "subject": 3,
+        "title": "Kazakhstan History",
+        "slug": "kazakhstan-history",
+        "overview": "History of kazakhs",
+        "created": "2024-04-06T16:31:51.878Z"
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 3,
+    "fields": {
+        "owner": 1,
+        "subject": 2,
+        "title": "Base Math",
+        "slug": "base-math",
+        "overview": "Base Math Course for Programmers.",
+        "created": "2024-04-06T16:34:06.866Z"
+    }
+}
+]

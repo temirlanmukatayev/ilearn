@@ -1,26 +1,29 @@
 [
 {
-  "model": "courses.subject",
-  "pk": 1,
-  "fields": {
-    "title": "Math",
-    "slug": "math"
-  }
+    "model": "courses.subject",
+    "pk": 1,
+    "fields": {
+        "title": "Programming",
+        "slug": "programming",
+        "created": "2024-04-06T16:16:49.492Z"
+    }
 },
 {
-  "model": "courses.subject",
-  "pk": 2,
-  "fields": {
-    "title": "Programming",
-    "slug": "programming"
-  }
+    "model": "courses.subject",
+    "pk": 2,
+    "fields": {
+        "title": "Math",
+        "slug": "math",
+        "created": "2024-04-06T16:16:55.658Z"
+    }
 },
 {
-  "model": "courses.subject",
-  "pk": 3,
-  "fields": {
-    "title": "History",
-    "slug": "history"
-  }
+    "model": "courses.subject",
+    "pk": 3,
+    "fields": {
+        "title": "History",
+        "slug": "history",
+        "created": "2024-04-06T16:17:01.372Z"
+    }
 }
 ]

@@ -23,17 +23,18 @@
                 <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == 'course_list' %}active{% endif %}" href="{% url 'course_list' %}">Courses</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'course_all' %}active{% endif %}" href="#">Courses</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == 'lesson_list' %}active{% endif %}" href="{% url 'lesson_list' %}">Lessons</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'lesson_all' %}active{% endif %}" href="#">Lessons</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   {{ request.user.username }}
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="{% url 'course_list' %}">My courses</a></li>
+                  <li><a class="dropdown-item" href="{% url 'lesson_list' %}">My lessons</a></li>
                   <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
                 </ul>
               </li>
