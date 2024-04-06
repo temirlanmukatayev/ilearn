@@ -1,0 +1,45 @@
+{% extends '_base.html' %}
+
+{% block title %}My lessons{% endblock title %}
+
+{% block content %}
+<div class="row mt-5">
+  <div class="col">
+    <h1>My Lessons <a href="#" class="btn btn-sm btn-outline-primary">Create new lesson</a></h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Lesson</th>
+          <th scope="col">Module</th>
+          <th scope="col">Course</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for lesson in object_list %}
+        <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td>{{ lesson }}</td>
+          <td>{{ lesson.module }}</td>
+          <td>{{ lesson.module.course }}</td>
+          <td>
+            <a href="#" class="btn btn-primary">Edit</a>
+            <a href="#" class="btn btn-primary">Delete</a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock content %}
+  
+    

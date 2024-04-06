@@ -69,6 +69,7 @@ def lesson_attachment_path(instance, filename):
 
 
 class Lesson(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     module = models.ForeignKey(
         Module,
         related_name='lessons',

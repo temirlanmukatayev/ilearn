@@ -5,7 +5,7 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
-from .models import Course
+from .models import Course, Lesson
 
 
 class OwnerRequiredMixin:
@@ -23,7 +23,7 @@ class SetOwnerMixin:
 class OwnerCourseMixin(OwnerRequiredMixin, LoginRequiredMixin, PermissionRequiredMixin):
     model = Course
     fields = ['subject', 'title', 'slug', 'overview']
-    success_url = reverse_lazy('manage_course_list')
+    success_url = reverse_lazy('course_list')
 
 
 class OwnerCourseEditMixin(OwnerCourseMixin, SetOwnerMixin):
@@ -50,3 +50,8 @@ class CourseUpdateView(OwnerCourseEditMixin, UpdateView):
 class CourseDeleteView(OwnerCourseMixin, DeleteView):
     template_name = 'courses/manage/course/delete.html'
     permission_required = 'courses.delete_course'
+
+
+class LessonListView(OwnerRequiredMixin, ListView):
+    model = Lesson
+    template_name = 'courses/manage/lesson/list.html'
