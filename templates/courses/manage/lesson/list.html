@@ -3,42 +3,42 @@
 {% block title %}My lessons{% endblock title %}
 
 {% block content %}
-<div class="row mt-5">
-  <div class="col">
-    <h1>My Lessons <a href="{% url 'lesson_create' %}" class="btn btn-sm btn-outline-primary">Create new lesson</a></h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Title</th>
-          <th scope="col">Module</th>
-          <th scope="col">Course</th>
-          <th scope="col">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for lesson in object_list %}
-        <tr>
-          <td>{{ lesson }}</td>
-          <td>{{ lesson.module }}</td>
-          <td>{{ lesson.module.course }}</td>
-          <td>
-            <a href="{% url 'lesson_detail' lesson.pk %}" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye-fill"></i></a>
-            <a href="{% url 'lesson_edit' lesson.pk %}" class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil-fill"></i></a>
-            <a href="{% url 'lesson_delete' lesson.pk %}" class="btn btn-sm btn-outline-primary"><i class="bi bi-trash-fill"></i></a>
-          </td>
-        </tr>
-        {% empty %}
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col">
+      <h1>My Lessons <a href="{% url 'lesson_create' %}" class="btn btn-sm btn-outline-primary">Create new lesson</a></h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Module</th>
+            <th scope="col">Course</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for lesson in object_list %}
+          <tr>
+            <td>{{ lesson }}</td>
+            <td>{{ lesson.module }}</td>
+            <td>{{ lesson.module.course }}</td>
+            <td>
+              <a href="{% url 'lesson_detail' lesson.pk %}" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye-fill"></i></a>
+              <a href="{% url 'lesson_edit' lesson.pk %}" class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil-fill"></i></a>
+              <a href="{% url 'lesson_delete' lesson.pk %}" class="btn btn-sm btn-outline-primary"><i class="bi bi-trash-fill"></i></a>
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 {% endblock content %}
-  
-    

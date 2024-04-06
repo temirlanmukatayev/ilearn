@@ -3,40 +3,42 @@
 {% block title %}My courses{% endblock title %}
 
 {% block content %}
-<div class="row mt-5">
-  <div class="col">
-    <h1>My Courses <a href="{% url 'course_create' %}" class="btn btn-sm btn-outline-primary">Create new course</a></h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Title</th>
-          <th scope="col">Subject</th>
-          <th scope="col">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for course in object_list %}
-        <tr>
-          <th scope="row">{{ forloop.counter }}</th>
-          <td>{{ course.title }}</td>
-          <td>{{ course.subject }}</td>
-          <td>
-            <a href="{% url 'course_detail' course.id %}" class="btn btn-outline-primary"><i class="bi bi-eye-fill"></i></a>
-            <a href="{% url 'course_edit' course.id %}" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i></a>
-            <a href="{% url 'course_delete' course.id %}" class="btn btn-outline-primary"><i class="bi bi-trash-fill"></i></a>
-          </td>
-        </tr>
-        {% empty %}
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col">
+      <h1>My Courses <a href="{% url 'course_create' %}" class="btn btn-sm btn-outline-primary">Create new course</a></h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for course in object_list %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ course.title }}</td>
+            <td>{{ course.subject }}</td>
+            <td>
+              <a href="{% url 'course_detail' course.id %}" class="btn btn-outline-primary"><i class="bi bi-eye-fill"></i></a>
+              <a href="{% url 'course_edit' course.id %}" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i></a>
+              <a href="{% url 'course_delete' course.id %}" class="btn btn-outline-primary"><i class="bi bi-trash-fill"></i></a>
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 {% endblock content %}

@@ -3,10 +3,12 @@
 {% block title %}Log-In{% endblock title %}
 
 {% block content %}
-<div class="row mt-5">
-  <div class="col">
-    <p>You have been successfully logged out.</p>
-    <p>You can <a href="{% url 'login' %}" class="text-decoration-none">sign-in</a> again</p> 
+<div class="container">
+  <div class="row mt-5">
+    <div class="col">
+      <p>You have been successfully logged out.</p>
+      <p>You can <a href="{% url 'login' %}" class="text-decoration-none">sign-in</a> again</p> 
+    </div>
   </div>
 </div>
 {% endblock content %}
