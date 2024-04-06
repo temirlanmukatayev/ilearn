@@ -32,6 +32,7 @@ class Course(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     overview = models.TextField()
+    cover = models.URLField(blank=True)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -51,6 +52,7 @@ class Module(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField(blank=True)
     order = OrderField(blank=True, null=True, for_fields=['course'])
+    cover = models.URLField(blank=True)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -83,6 +85,7 @@ class Lesson(models.Model):
     image = models.ImageField(blank=True, upload_to=lesson_attachment_path)
     file = models.FileField(blank=True, upload_to=lesson_attachment_path)
     video = models.URLField(blank=True)
+    cover = models.URLField(blank=True)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:

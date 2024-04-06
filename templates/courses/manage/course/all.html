@@ -1,0 +1,32 @@
+{% extends '_base.html' %}
+
+{% block title %}All courses{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <div class="row mt-5 mb-5">
+    <div class="col">
+      <h1 class="text-center">All Courses</h1>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for course in object_list %}
+    <div class="col">
+      <div class="card h-100">
+        <img src="{{ course.cover }}" class="card-img-top" alt="..." style="max-height: 230px;">
+        <div class="card-body">
+          <h5 class="card-title">{{ course.title }}</h5>
+          <p class="card-text">{{ course.overview | truncatechars:150 }}</p>
+          <a href="#" class="btn btn-outline-primary">View</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Created {{ course.created | date:"d M Y" }} by {{ course.owner }}</small>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
+  
+    

@@ -7,7 +7,7 @@
         "subject": 1,
         "title": "Object oriented programming with Python",
         "slug": "object-oriented-programming-with-python",
-        "overview": "Complete Python course with focus on Object Oriented Programming.",
+        "overview": "This course introduces advanced programming skills and focuses on the core concepts\r\nof object-oriented programming and design using a high-level language, either Python\r\nor Java. Object-oriented programming represents the integration of software\r\ncomponents into a large-scale software architecture.",
         "created": "2024-04-06T16:21:25.168Z"
     }
 },
@@ -19,7 +19,7 @@
         "subject": 3,
         "title": "Kazakhstan History",
         "slug": "kazakhstan-history",
-        "overview": "History of kazakhs",
+        "overview": "Choose from a range of different topics that interest you, from politics in the Roman Republic to material culture in the Ottoman Empire and neoliberalism.",
         "created": "2024-04-06T16:31:51.878Z"
     }
 },
@@ -31,7 +31,7 @@
         "subject": 2,
         "title": "Base Math",
         "slug": "base-math",
-        "overview": "Base Math Course for Programmers.",
+        "overview": "Mathematics is rich and stimulating and develops logical reasoning, analysis, problem solving skills, creativity and the ability to think in abstract ways.",
         "created": "2024-04-06T16:34:06.866Z"
     }
 }

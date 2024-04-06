@@ -87,3 +87,8 @@ class LessonDeleteView(LoginRequiredMixin, OwnerRequiredMixin, DeleteView):
     model = Lesson
     template_name = 'courses/manage/lesson/delete.html'
     success_url = reverse_lazy('lesson_list')
+
+
+class CourseListAllView(ListView):
+    model = Course
+    template_name = 'courses/manage/course/all.html'
