@@ -5,12 +5,11 @@
 {% block content %}
 <div class="row mt-5">
   <div class="col">
-    <h1>My Lessons <a href="#" class="btn btn-sm btn-outline-primary">Create new lesson</a></h1>
+    <h1>My Lessons <a href="{% url 'lesson_create' %}" class="btn btn-sm btn-outline-primary">Create new lesson</a></h1>
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Lesson</th>
+          <th scope="col">Title</th>
           <th scope="col">Module</th>
           <th scope="col">Course</th>
           <th scope="col">Action</th>
@@ -19,13 +18,13 @@
       <tbody>
         {% for lesson in object_list %}
         <tr>
-          <th scope="row">{{ forloop.counter }}</th>
           <td>{{ lesson }}</td>
           <td>{{ lesson.module }}</td>
           <td>{{ lesson.module.course }}</td>
           <td>
-            <a href="#" class="btn btn-primary">Edit</a>
-            <a href="#" class="btn btn-primary">Delete</a>
+            <a href="{% url 'lesson_detail' lesson.pk %}" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye-fill"></i></a>
+            <a href="{% url 'lesson_edit' lesson.pk %}" class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil-fill"></i></a>
+            <a href="{% url 'lesson_delete' lesson.pk %}" class="btn btn-sm btn-outline-primary"><i class="bi bi-trash-fill"></i></a>
           </td>
         </tr>
         {% empty %}

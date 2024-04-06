@@ -1,6 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, \
     PermissionRequiredMixin
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -55,3 +55,30 @@ class CourseDeleteView(OwnerCourseMixin, DeleteView):
 class LessonListView(OwnerRequiredMixin, ListView):
     model = Lesson
     template_name = 'courses/manage/lesson/list.html'
+
+
+class LessonDetailView(OwnerRequiredMixin, DetailView):
+    model = Lesson
+    template_name = 'courses/manage/lesson/detail.html'
+
+
+class LessonCreateView(LoginRequiredMixin, SetOwnerMixin, CreateView):
+    model = Lesson
+    fields = ['module', 'title', 'slug', 'description', 'order',
+              'content', 'image', 'file', 'video']
+    template_name = 'courses/manage/lesson/form.html'
+    success_url = reverse_lazy('lesson_list')
+
+
+class LessonUpdateView(LoginRequiredMixin, UpdateView):
+    model = Lesson
+    fields = ['module', 'title', 'slug', 'description', 'order',
+              'content', 'image', 'file', 'video']
+    template_name = 'courses/manage/lesson/form.html'
+    success_url = reverse_lazy('lesson_list')
+
+
+class LessonDeleteView(LoginRequiredMixin, OwnerRequiredMixin, DeleteView):
+    model = Lesson
+    template_name = 'courses/manage/lesson/delete.html'
+    success_url = reverse_lazy('lesson_list')

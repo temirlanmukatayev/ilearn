@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block title %}Lesson Details{% endblock title %}
+
+{% block content %}
+<div class="row mt-5">
+  <div class="col">
+    <h3>Lesson {{ object }}</h3>
+    <p>
+      {{ object.description }}
+    </p>
+  </div>
+</div>
+{% endblock content %}
+  
+    
