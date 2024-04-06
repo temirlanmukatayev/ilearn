@@ -1,3 +1,4 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin, \
     PermissionRequiredMixin
 from django.views.generic import TemplateView, DetailView
@@ -92,3 +93,9 @@ class LessonDeleteView(LoginRequiredMixin, OwnerRequiredMixin, DeleteView):
 class CourseListAllView(ListView):
     model = Course
     template_name = 'courses/manage/course/all.html'
+
+
+class SignUpView(CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'registration/signup.html'
