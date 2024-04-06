@@ -19,15 +19,18 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'course_all' %}active{% endif %}" href="{% url 'course_all' %}">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'module_all' %}active{% endif %}" href="#">Modules</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'lesson_all' %}active{% endif %}" href="#">Lessons</a>
               </li>
               {% if user.is_authenticated %}
-              <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   {{ request.user.username }}
@@ -51,6 +54,19 @@
 
     <div class="content">
       {% block content %}{% endblock content %}
+    </div>
+    <div class="container mt-5 pt-5">
+      <div class="row">
+        <hr class="mt-5 mb-5 border border-primary border-1 opacity-50">
+        <div class="col">
+          <h1 class="text-center">This is a demonstration project</h1>
+          <p class="text-center mt-3 mb-5">
+            This is a demonstration project created by Temirlan. All functionality is working.<br>
+            You can sign-up, create your course and lessons. Try it now)<br>
+            Additional information and the source code can be found on github page <a href="#">here</a>.
+          </p>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
