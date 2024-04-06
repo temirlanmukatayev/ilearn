@@ -22,8 +22,9 @@
           <td>{{ course.title }}</td>
           <td>{{ course.subject }}</td>
           <td>
-            <a href="{% url 'course_edit' course.id %}" class="btn btn-outline-primary"><i class="bi bi-eye-fill"></i></a>
-            <a href="{% url 'course_delete' course.id %}" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i></a>
+            <a href="#" class="btn btn-outline-primary"><i class="bi bi-eye-fill"></i></a>
+            <a href="{% url 'course_edit' course.id %}" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i></a>
+            <a href="{% url 'course_delete' course.id %}" class="btn btn-outline-primary"><i class="bi bi-trash-fill"></i></a>
           </td>
         </tr>
         {% empty %}
