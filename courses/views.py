@@ -39,6 +39,11 @@ class ManageCourseListView(OwnerCourseMixin, ListView):
     permission_required = 'courses.view_course'
 
 
+class CourseDetailView(OwnerRequiredMixin, DetailView):
+    model = Course
+    template_name = 'courses/manage/course/detail.html'
+
+
 class CourseCreateView(OwnerCourseEditMixin, CreateView):
     permission_required = 'courses.add_course'
 

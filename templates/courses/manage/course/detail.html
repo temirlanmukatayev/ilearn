@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block title %}Course Details{% endblock title %}
+
+{% block content %}
+<div class="row mt-5">
+  <div class="col">
+    <h3>Course "{{ course }}"</h3>
+    <p>Subject: {{ course.subject }}</p>
+    <p>{{ course.overview }}</p>
+    <p>Created: {{ course.created }}</p>
+  </div>
+</div>
+{% endblock content %}
+  
+    
