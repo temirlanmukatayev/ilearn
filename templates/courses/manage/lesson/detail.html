@@ -1,31 +1,34 @@
 {% extends '_base.html' %}
+{% load cache %}
 
 {% block title %}Lesson Details{% endblock title %}
 
 {% block content %}
-<div class="container">
-  <div class="row mt-5">
-    <div class="col">
-      <h3>Lesson {{ object }}</h3>
-      <p>
-        Module: <a href="#" class="text-decoration-none">{{ object.module }}.</a><br>
-        Course: <a href="#" class="text-decoration-none">{{ object.module.course }}</a>
-      </p>
+  {% cache 600 lesson_content lesson %}
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Lesson {{ object }}</h3>
+          <p>
+            Module: <a href="#" class="text-decoration-none">{{ object.module }}.</a><br>
+            Course: <a href="#" class="text-decoration-none">{{ object.module.course }}</a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="iframeWrapper" class="embed-responsive embed-responsive-16by9 text-center">1</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">        
+          <p id="checkWidth">
+            {{ object.content | linebreaks }}
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div id="iframeWrapper" class="embed-responsive embed-responsive-16by9 text-center">1</div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">        
-      <p id="checkWidth">
-        {{ object.content | linebreaks }}
-      </p>
-    </div>
-  </div>
-</div>
+  {% endcache %}
 {% endblock content %}
 
 {% block page_js %}

@@ -1,3 +1,10 @@
 Django
 Bootstrap 5
 Media and static files support
+Memcached
+    - Low-level cache: lesson detail content
+    - Page cache: All courses, All modules, All lessons
+Django Debug Toolbar
+
+Run memcached docker:
+docker run -d -it --rm --name memcached -p 11211:11211 memcached -m 64

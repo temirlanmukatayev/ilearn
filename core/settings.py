@@ -41,12 +41,14 @@ INSTALLED_APPS = [
     # 3rd-parties
     'crispy_forms',
     'crispy_bootstrap5',
+    'debug_toolbar',
 
     # my
     'courses.apps.CoursesConfig',
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -137,3 +139,14 @@ LOGOUT_REDIRECT_URL = 'home'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+# for memcached
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
+        'location': '127.0.0.1:11211',
+    }
+}
+
+# for debug_toolbar
+INTERNAL_IPS = ['127.0.0.1',]
