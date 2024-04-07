@@ -1,0 +1,3 @@
+Django
+Bootstrap 5
+Media and static files support
