@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     # my
     'courses.apps.CoursesConfig',
+    'chat.apps.ChatConfig',
 ]
 
 MIDDLEWARE = [
