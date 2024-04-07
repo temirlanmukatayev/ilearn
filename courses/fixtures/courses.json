@@ -8,6 +8,7 @@
         "title": "Object oriented programming with Python",
         "slug": "object-oriented-programming-with-python",
         "overview": "This course introduces advanced programming skills and focuses on the core concepts\r\nof object-oriented programming and design using a high-level language, either Python\r\nor Java. Object-oriented programming represents the integration of software\r\ncomponents into a large-scale software architecture.",
+        "cover": "https://cms-assets.themuse.com/media/lead/01212022-1047259374-coding-classes_scanrail.jpg",
         "created": "2024-04-06T16:21:25.168Z"
     }
 },
@@ -20,6 +21,7 @@
         "title": "Kazakhstan History",
         "slug": "kazakhstan-history",
         "overview": "Choose from a range of different topics that interest you, from politics in the Roman Republic to material culture in the Ottoman Empire and neoliberalism.",
+        "cover": "https://www.learnnow.org.uk/wp-content/uploads/2022/06/IGCSE-History-CAIE-1024x768.jpg",
         "created": "2024-04-06T16:31:51.878Z"
     }
 },
@@ -32,6 +34,7 @@
         "title": "Base Math",
         "slug": "base-math",
         "overview": "Mathematics is rich and stimulating and develops logical reasoning, analysis, problem solving skills, creativity and the ability to think in abstract ways.",
+        "cover": "https://www.kdnuggets.com/wp-content/uploads/mathematics-algebra-header-chalkboard.jpg",
         "created": "2024-04-06T16:34:06.866Z"
     }
 }

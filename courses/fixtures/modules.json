@@ -1,0 +1,119 @@
+[
+{
+    "model": "courses.module",
+    "pk": 1,
+    "fields": {
+        "course": 1,
+        "title": "Introduction",
+        "slug": "oop-introduction",
+        "description": "Introduction into programming with Python.",
+        "order": 1,
+        "cover": "",
+        "created": "2024-04-06T16:21:25.171Z"
+    }
+},
+{
+    "model": "courses.module",
+    "pk": 2,
+    "fields": {
+        "course": 1,
+        "title": "Data Structures",
+        "slug": "python-data-structures",
+        "description": "All data structures in Python language explained.",
+        "order": 2,
+        "cover": "",
+        "created": "2024-04-06T16:21:25.172Z"
+    }
+},
+{
+    "model": "courses.module",
+    "pk": 3,
+    "fields": {
+        "course": 1,
+        "title": "Classes",
+        "slug": "classes",
+        "description": "How classes work in Python.",
+        "order": 3,
+        "cover": "",
+        "created": "2024-04-06T16:21:25.172Z"
+    }
+},
+{
+    "model": "courses.module",
+    "pk": 4,
+    "fields": {
+        "course": 2,
+        "title": "Ancient times",
+        "slug": "ancient-times",
+        "description": "History of kazakhs in ancient times",
+        "order": 1,
+        "cover": "",
+        "created": "2024-04-06T16:31:51.879Z"
+    }
+},
+{
+    "model": "courses.module",
+    "pk": 5,
+    "fields": {
+        "course": 2,
+        "title": "Kazakh nation in new era",
+        "slug": "new-era",
+        "description": "History of kazakh in New era",
+        "order": 2,
+        "cover": "",
+        "created": "2024-04-06T16:31:51.880Z"
+    }
+},
+{
+    "model": "courses.module",
+    "pk": 6,
+    "fields": {
+        "course": 2,
+        "title": "Modern History",
+        "slug": "modern-times",
+        "description": "History of kazakhs in modern time and Kazakh Republic.",
+        "order": null,
+        "cover": "",
+        "created": "2024-04-06T16:31:51.880Z"
+    }
+},
+{
+    "model": "courses.module",
+    "pk": 7,
+    "fields": {
+        "course": 3,
+        "title": "Introduction",
+        "slug": "intro",
+        "description": "Introduction in base math for programmers.",
+        "order": 1,
+        "cover": "",
+        "created": "2024-04-06T16:34:06.869Z"
+    }
+},
+{
+    "model": "courses.module",
+    "pk": 8,
+    "fields": {
+        "course": 3,
+        "title": "Main themes",
+        "slug": "main-themes",
+        "description": "Main themes of Math for programmers.",
+        "order": 2,
+        "cover": "",
+        "created": "2024-04-06T16:34:06.870Z"
+    }
+},
+{
+    "model": "courses.module",
+    "pk": 9,
+    "fields": {
+        "course": 3,
+        "title": "Advanced Math Topics",
+        "slug": "advanced-math",
+        "description": "Advanced Math Topics for Programmers.",
+        "order": 3,
+        "cover": "",
+        "created": "2024-04-06T16:34:06.870Z"
+    }
+}
+]
