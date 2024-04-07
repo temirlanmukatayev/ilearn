@@ -30,6 +30,7 @@ urlpatterns = [
     path('accounts/signup/', SignUpView.as_view(), name='signup'),
     path('admin/', admin.site.urls),
     path('', include('courses.urls')),
+    path('api/', include('courses.api.urls', namespace='api')),
 ]
 
 if settings.DEBUG == True:

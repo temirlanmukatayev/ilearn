@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 3rd-parties
+    'rest_framework',
     'crispy_forms',
     'crispy_bootstrap5',
     'debug_toolbar',
@@ -150,3 +151,10 @@ CACHES = {
 
 # for debug_toolbar
 INTERNAL_IPS = ['127.0.0.1',]
+
+# for DRF
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

@@ -5,6 +5,7 @@ Memcached
     - Low-level cache: lesson detail content
     - Page cache: All courses, All modules, All lessons
 Django Debug Toolbar
+DRF
 
 Run memcached docker:
 docker run -d -it --rm --name memcached -p 11211:11211 memcached -m 64
