@@ -17,7 +17,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ lesson.title }}</h5>
           <p class="card-text">{{ lesson.description | truncatechars:150 }}</p>
-          <a href="#" class="btn btn-outline-primary">View</a>
+          <a href="{% url 'lesson_detail' lesson.pk %}" class="btn btn-outline-primary">View</a>
         </div>
         <div class="card-footer">
           <small class="text-body-secondary">Created {{ lesson.created | date:"d M Y" }} by {{ lesson.owner }}</small>

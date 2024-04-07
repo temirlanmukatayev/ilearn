@@ -8,11 +8,49 @@
     <div class="col">
       <h3>Lesson {{ object }}</h3>
       <p>
-        {{ object.description }}
+        Module: <a href="#" class="text-decoration-none">{{ object.module }}.</a><br>
+        Course: <a href="#" class="text-decoration-none">{{ object.module.course }}</a>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div id="iframeWrapper" class="embed-responsive embed-responsive-16by9 text-center">1</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">        
+      <p id="checkWidth">
+        {{ object.content | linebreaks }}
       </p>
     </div>
   </div>
 </div>
 {% endblock content %}
+
+{% block page_js %}
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      function getId(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const match = url.match(regExp);
+
+        return (match && match[2].length === 11)
+          ? match[2]
+          : null;
+      }
+
+      const max_width = document.getElementById("checkWidth").clientWidth / 1.75;
+      const max_height = max_width / 1.75;
+
+      const videoId = getId('{{ object.video }}');
+      const iframeMarkup = '<iframe class="embed-responsive-item" height="' + max_height + 'px" width="' + max_width + 'px" src="//www.youtube.com/embed/' 
+        + videoId + '" allowfullscreen></iframe>';
+
+      console.log('Video ID:', videoId)
+
+      document.getElementById("iframeWrapper").innerHTML = iframeMarkup;
+    })
+  </script>
+{% endblock page_js %}
   
-    
