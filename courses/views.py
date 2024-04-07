@@ -63,7 +63,7 @@ class LessonListView(OwnerRequiredMixin, ListView):
     template_name = 'courses/manage/lesson/list.html'
 
 
-class LessonDetailView(OwnerRequiredMixin, DetailView):
+class LessonDetailView(DetailView):
     model = Lesson
     template_name = 'courses/manage/lesson/detail.html'
 
