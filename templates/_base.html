@@ -25,10 +25,10 @@
                 <a class="nav-link {% if request.resolver_match.url_name == 'course_all' %}active{% endif %}" href="{% url 'course_all' %}">Courses</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == 'module_all' %}active{% endif %}" href="#">Modules</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'module_all' %}active{% endif %}" href="{% url 'module_all' %}">Modules</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == 'lesson_all' %}active{% endif %}" href="#">Lessons</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'lesson_all' %}active{% endif %}" href="{% url 'lesson_all' %}">Lessons</a>
               </li>
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">

@@ -6,7 +6,7 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
-from .models import Course, Lesson
+from .models import Course, Module, Lesson
 
 
 class OwnerRequiredMixin:
@@ -93,6 +93,16 @@ class LessonDeleteView(LoginRequiredMixin, OwnerRequiredMixin, DeleteView):
 class CourseListAllView(ListView):
     model = Course
     template_name = 'courses/manage/course/all.html'
+
+
+class ModuleListAllView(ListView):
+    model = Module
+    template_name = 'courses/manage/module/all.html'
+
+
+class LessonListAllView(ListView):
+    model = Lesson
+    template_name = 'courses/manage/lesson/all.html'
 
 
 class SignUpView(CreateView):
