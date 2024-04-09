@@ -9,3 +9,6 @@ DRF
 
 Run memcached docker:
 docker run -d -it --rm --name memcached -p 11211:11211 memcached -m 64
+
+Run redis docker:
+docker run -d -it --rm --name redis -p 6379:6379 redis
