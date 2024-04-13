@@ -1,11 +1,16 @@
-Django
-Bootstrap 5
-Media and static files support
-Memcached
-    - Low-level cache: lesson detail content
-    - Page cache: All courses, All modules, All lessons
-Django Debug Toolbar
-DRF
+Stack:
+    Django 4.2
+    Bootstrap 5 and Crispy Forms
+    DRF
+        API for Subjects and Courses
+    Memcached
+        Low-level cache: lesson detail content
+        Page cache: All courses, All modules, All lessons
+    Django Channels, Daphne and Redis
+        Online chat - fully asynchronous chat with separate rooms for each course
+Features:
+    Media and static files support
+    Django Debug Toolbar added
 
 Run memcached docker:
 docker run -d -it --rm --name memcached -p 11211:11211 memcached -m 64
