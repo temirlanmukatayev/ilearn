@@ -46,9 +46,12 @@ INSTALLED_APPS = [
     'debug_toolbar',
 
     # my
+    'users.apps.UsersConfig',
     'courses.apps.CoursesConfig',
     'chat.apps.ChatConfig',
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
